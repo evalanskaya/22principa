@@ -59,7 +59,54 @@
     .checkout-error { color: #a13f35; }
 
     .checkout-success { color: #386549; }
-  </style>
+ .book-checkout {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 22px;
+}
+
+.book-checkout-cover {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 3px;
+  box-shadow: 5px 8px 18px rgba(45, 30, 20, 0.18);
+}
+
+.book-checkout-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-checkout-info h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 12px 0 20px;
+}
+
+.book-checkout-info .price {
+  font-size: 36px;
+}
+
+@media (max-width: 420px) {
+  .book-checkout {
+    gap: 15px;
+    padding: 16px;
+  }
+
+  .book-checkout-cover {
+    width: 95px;
+  }
+
+  .book-checkout-info h3 {
+    font-size: 18px;
+  }
+
+  .book-checkout-info .price {
+    font-size: 30px;
+  }
+} </style>
 </head>
 
 <body>
