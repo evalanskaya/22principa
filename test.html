@@ -208,7 +208,7 @@ const REVIEWS=[
 {name:'Наталья В.',quote:'Честно, не ожидала чего-то особенного за такую небольшую сумму. Но прочитала всё за вечер, а потом вернулась к некоторым главам. Особенно про умение говорить нет и не чувствовать себя после этого плохим человеком.'},
 {name:'Ирина П.',quote:'Мне 51, всю жизнь сначала дети, муж, родители, работа, а я где-то в самом конце. И самое интересное, что я даже не замечала этого. Не скажу, что за один день всё изменилось, но я хотя бы начала задавать себе вопрос: а чего хочу именно я?'}
 ];
-function reviewsHTML(){return `<section class="card reviews-section" aria-label="Отзывы читательниц"><p class="eyebrow">Впечатления о материалах Евы</p><h3>Отзывы читательниц</h3><p class="reviews-intro">Истории, в которых многие могут узнать себя.</p><div class="reviews-track" id="reviews-track" tabindex="0" aria-label="Карточки отзывов, прокручиваются по горизонтали">${REVIEWS.map(r=>`<article class="review-card"><span class="review-mark" aria-hidden="true">“</span><p>«${safe(r.quote)}»</p><div class="review-author">${safe(r.name)}</div></article>`).join('')}</div><div class="reviews-progress" aria-hidden="true"><span id="reviews-progress-fill"></span></div><div class="review-nav"><span id="reviews-position">1 из ${REVIEWS.length}</span><div class="review-arrows"><button type="button" class="review-arrow" id="review-prev" aria-label="Предыдущий отзыв">←</button><button type="button" class="review-arrow" id="review-next" aria-label="Следующий отзыв">→</button></div></div></section><div class="closing-cta"><h3>Начните с одного шага к себе</h3><p>22 принципа и практические задания в электронной книге Евы Ланской.</p><a class="primary" href="./payment.html" id="buy-after-reviews" style="width:100%">Получить книгу · 490 ₽ →</a></div>`}
+function reviewsHTML(){return `<section class="card reviews-section" aria-label="Отзывы читательниц"><p class="eyebrow">Впечатления о материалах Евы</p><h3>Отзывы читательниц</h3><p class="reviews-intro">Истории, в которых многие могут узнать себя.</p><div class="reviews-track" id="reviews-track" tabindex="0" aria-label="Карточки отзывов, прокручиваются по горизонтали">${REVIEWS.map(r=>`<article class="review-card"><span class="review-mark" aria-hidden="true">“</span><p>«${safe(r.quote)}»</p><div class="review-author">${safe(r.name)}</div></article>`).join('')}</div><div class="reviews-progress" aria-hidden="true"><span id="reviews-progress-fill"></span></div><div class="review-nav"><span id="reviews-position">1 из ${REVIEWS.length}</span><div class="review-arrows"><button type="button" class="review-arrow" id="review-prev" aria-label="Предыдущий отзыв">←</button><button type="button" class="review-arrow" id="review-next" aria-label="Следующий отзыв">→</button></div></div></section><div class="closing-cta"><h3>Начните с одного шага к себе</h3><p>22 принципа и практические задания в книге Евы Ланской.</p><a class="primary" href="./payment.html" id="buy-after-reviews" style="width:100%">Получить книгу · 490 ₽ →</a></div>`}
 function activateReviews(category){
  const rail=document.getElementById('reviews-track');if(!rail)return;
  const cards=[...rail.querySelectorAll('.review-card')];
@@ -293,7 +293,7 @@ function finish(){
  <div class="card book-section" id="eva-book">
    <p class="eyebrow">Материал Евы Ланской</p>
    <h2>«Женщина, которая выбирает себя»</h2>
-   <p class="result-copy"><strong>Это электронная книга, а не ещё один тест.</strong> В ней собраны 22 принципа о личных границах, отношениях, уважении к своим желаниям и времени — с простыми ситуациями из жизни и практическими шагами.</p>
+   <p class="result-copy"><strong>Это книга, а не ещё один тест.</strong> В ней собраны 22 принципа о личных границах, отношениях, уважении к своим желаниям и времени — с простыми ситуациями из жизни и практическими шагами.</p>
    <div class="features">
      <div class="feature"><div class="feature-num">1</div><div><strong>22 принципа на каждый день</strong><span>Понять, где компромисс, а где постоянный отказ от себя; научиться говорить «нет» без длинных оправданий.</span></div></div>
      <div class="feature"><div class="feature-num">2</div><div><strong>Конкретные упражнения</strong><span>Не только прочитать мысль, но и попробовать её в разговорах, решениях и отношениях.</span></div></div>
@@ -302,10 +302,9 @@ function finish(){
    <div class="result-highlight"><strong>Особенно полезно с вашим результатом</strong><p>${safe(d.book)}</p></div>
    <div class="book">
      <img class="book-cover" src="./kniga-eva.png" alt="Обложка книги Евы Ланской — Женщина, которая выбирает себя" loading="lazy">
-     <div class="book-copy"><h3>От понимания — к действиям</h3><p>Электронная книга · 22 принципа · практические задания</p><div class="price">490 ₽</div></div>
+     <div class="book-copy"><h3>От понимания — к действиям</h3><p>Книга · 22 принципа · практические задания</p><div class="price">490 ₽</div></div>
    </div>
-   <p class="result-copy" style="font-size:14px">Вы уже получили свой результат бесплатно. Книга — необязательный следующий шаг для тех, кто хочет глубже разобраться в теме и попробовать новые способы действовать.</p>
-   <a class="primary" href="./payment.html" id="buy" style="width:100%">Получить электронную книгу · 490 ₽ <span aria-hidden="true">→</span></a>
+   <a class="primary" href="./payment.html" id="buy" style="width:100%">Получить книгу · 490 ₽ <span aria-hidden="true">→</span></a>
    <p class="smallprint" style="text-align:center">После подтверждения оплаты книга будет отправлена на указанный email в течение 1 часа.</p>
  </div>
  ${reviewsHTML()}
